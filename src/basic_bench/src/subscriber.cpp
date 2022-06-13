@@ -1,13 +1,15 @@
 #include "ros/ros.h"
 #include "basic_bench/Bench.h"
+#include "config.h"
 #include <algorithm>
 #include <type_traits>
 #include <fstream>
 
-#define BASIC_BENCH_DATA_BUF 10000U
-#define BASIC_BENCH_WRITE_FOLDER "/home/ruben/june-measurements/results/basic_bench/"
+
+const char* file_suffixes[] = {"_16b_", "_32b_", "_64b_", "_256b_", "_1024b_", "_4096b_", "_65536b_", nullptr};
 
 int prev_msg_id = -1; // used for asserting continuity of messages.
+int mode_id = 0;      // used for tracking what message size is being measured.
 int write_id = 0;     // used for file names 
 int measure_id = 0;   // used for indexing the data buffer
 int64_t measurements[BASIC_BENCH_DATA_BUF];
@@ -16,9 +18,8 @@ template <typename T>
 std::string write(T buf, uint32_t siz, const char* base_path) {
   static_assert(std::is_pointer<T>::value);
 
-  std::string suffix = "batch_" + std::to_string(write_id);
+  std::string suffix = "batch" + std::string(file_suffixes[mode_id]) + std::to_string(write_id);
   std::string path = std::string(base_path) + suffix;
-  write_id++;
   
   std::ofstream file(path);
   if (!file) {
@@ -45,21 +46,35 @@ void subCallback(const basic_bench::Bench::ConstPtr& msg) {
   int32_t id = msg->id;
   int64_t send_stamp = msg->stamp;
   int64_t measurement = ros::Time::now().toNSec() - send_stamp;
+  size_t vector_size = msg->junk.size();
 
   if (prev_msg_id != -1 && prev_msg_id + 1 != id) {
     ROS_ERROR("Cannot keep up with the Publisher. Expected id [%d], got [%d]", prev_msg_id + 1, id);
     exit(-2);
   }
 
+  if (id < BASIC_BENCH_PUBLISHER_EXTRA) return; // synchronisation, the first (X) are not counted as measurements.
+
   measurements[measure_id++] = measurement;
   prev_msg_id = id;
 
   if (measure_id == BASIC_BENCH_DATA_BUF) {
     measure_id = 0;
-    ROS_INFO("buffer filled.");
     std::string result = write(measurements, BASIC_BENCH_DATA_BUF, BASIC_BENCH_WRITE_FOLDER);
-    ROS_INFO("wrote to file [%s]", result.c_str());
+    ROS_INFO("wrote [%u] measurements to file:\n[%s]", BASIC_BENCH_DATA_BUF, result.c_str());
     zeroBuffer(measurements, BASIC_BENCH_DATA_BUF);
+
+    write_id++;
+    if (write_id == BASIC_BENCH_BATCH_PER_SIZE) { // next data size incoming
+      write_id = 0;
+      mode_id++; // ensures the file written to is named appropriately.
+      if (file_suffixes[mode_id] == nullptr) {
+        ROS_INFO("Done with all scheduled measurements");
+        exit(0);
+      } else {
+        ROS_INFO("ID [%d], expect size change on the next message.", id);
+      }
+    }
   }
 }
 
