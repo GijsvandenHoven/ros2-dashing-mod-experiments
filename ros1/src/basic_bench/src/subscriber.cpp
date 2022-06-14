@@ -6,6 +6,7 @@
 #include <fstream>
 
 
+int expected_vector_size[] = {0, 16, 48, 240, 1008, 4080, 65520};
 const char* file_suffixes[] = {"_16b_", "_32b_", "_64b_", "_256b_", "_1024b_", "_4096b_", "_65536b_", nullptr};
 
 int prev_msg_id = -1; // used for asserting continuity of messages.
@@ -50,6 +51,12 @@ void subCallback(const basic_bench::Bench::ConstPtr& msg) {
 
   if (prev_msg_id != -1 && prev_msg_id + 1 != id) {
     ROS_ERROR("Cannot keep up with the Publisher. Expected id [%d], got [%d]", prev_msg_id + 1, id);
+    exit(-2);
+  }
+
+  const int expected_size = expected_vector_size[mode_id];
+  if (expected_size != vector_size) {
+    ROS_ERROR("Expected message size does not match received message Size. Expected size [%d], got [%lu]", expected_size, vector_size);
     exit(-2);
   }
 
