@@ -9,5 +9,8 @@
 #define BASIC_BENCH_BATCH_PER_SIZE 5
 #define BASIC_BENCH_PUBLISHER_EXTRA 100
 
+// toggle a call to sleep. currently not possible, due to member function requirements in rclcpp::context while i have no such object
+// #define USE_SLEEP
+
 
 #endif // PUB_SUB_CONFIG

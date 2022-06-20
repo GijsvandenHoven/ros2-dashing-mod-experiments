@@ -41,6 +41,18 @@ private:
       RCLCPP_INFO(this->get_logger(), "ID [%d], switch to size [%d]", id_, scheduledSize);
       if (scheduledSize == -1) {
         RCLCPP_INFO(this->get_logger(), "Published all messages for all scheduled sizes.");
+        
+#ifdef USE_SLEEP
+        std::chrono::nanoseconds sleepfor = 2s; // https://en.cppreference.com/w/cpp/chrono/operator%22%22ns
+        // sometimes, the subscriber does not receive the last message on ROS2. suspected race condition with shutdown and sending?
+        auto context = rclcpp::Context::get_rcl_context();        // error: this is a member function.
+        context->sleep_for(sleepfor);
+#else
+        for (unsigned int i = 0; i < 4000000000; ++i) {
+          if (i % 1000000000 == 0) RCLCPP_INFO(this->get_logger(), "%u", i);
+        }
+#endif
+        RCLCPP_INFO(this->get_logger(), "Shutting down");
         exit(0);
       }
     }
