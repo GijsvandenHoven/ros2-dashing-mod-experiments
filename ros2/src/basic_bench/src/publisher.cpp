@@ -68,7 +68,7 @@ private:
         }
 #endif
         RCLCPP_INFO(this->get_logger(), "Shutting down");
-        exit(0);
+        rclcpp::shutdown();
       }
     }
   }
