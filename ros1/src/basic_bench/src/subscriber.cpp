@@ -93,7 +93,11 @@ int main(int argc, char **argv) {
   
   // want enough buffer to fill one set of measurements, even if the publisher is going too fast.
   // This would be exposed in measurements where later data points "drift".
+#ifdef USE_TCP_HINT
+  ros::Subscriber sub = n.subscribe("bench", BASIC_BENCH_DATA_BUF, subCallback, ros::TransportHints().tcpNoDelay(true));
+#else
   ros::Subscriber sub = n.subscribe("bench", BASIC_BENCH_DATA_BUF, subCallback);
+#endif
 
   ROS_INFO("subscriber ready.\n\nDid you remember to empty the target folder? it is\n[%s].", BASIC_BENCH_WRITE_FOLDER);
 

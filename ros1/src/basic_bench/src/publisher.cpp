@@ -25,10 +25,11 @@ int main(int argc, char **argv)
   {
     basic_bench::Bench msg; // note to self: It appears this default initializes everything, including the vector. 
 
-    msg.stamp = ros::Time::now().toNSec();
+    
     msg.id = id;
     msg.junk.resize(vectorSizeSchedule[sizeScheduleIndex]); // https://cplusplus.com/reference/vector/vector/resize/ -- "if val is specified (...) otherwise, they are value-initialized". In the case of chars, that's setting it all to zeroes.
-
+    msg.stamp = ros::Time::now().toNSec();
+    
     pub.publish(msg);
 
     ++id;
