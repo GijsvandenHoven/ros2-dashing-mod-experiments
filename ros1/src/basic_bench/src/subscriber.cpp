@@ -5,6 +5,10 @@
 #include <type_traits>
 #include <fstream>
 
+#ifdef USE_CHRONO
+#include <chrono>
+#endif
+
 
 int expected_vector_size[] = {0, 16, 48, 240, 1008, 4080, 65520};
 const char* file_suffixes[] = {"_16b_", "_32b_", "_64b_", "_256b_", "_1024b_", "_4096b_", "_65536b_", nullptr};
@@ -46,7 +50,13 @@ void zeroBuffer(T buf, uint32_t siz) {
 void subCallback(const basic_bench::Bench::ConstPtr& msg) {
   int32_t id = msg->id;
   int64_t send_stamp = msg->stamp;
+#ifdef USE_CHRONO
+  auto now = std::chrono::steady_clock::now();
+  auto now_64b = std::chrono::duration_cast<std::chrono::nanoseconds>(now.time_since_epoch()).count();
+  int64_t measurement = now_64b - send_stamp;
+#else
   int64_t measurement = ros::Time::now().toNSec() - send_stamp;
+#endif
   size_t vector_size = msg->junk.size();
 
   if (prev_msg_id != -1 && prev_msg_id + 1 != id) {
