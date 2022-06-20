@@ -105,8 +105,10 @@ int main(int argc, char **argv) {
   // This would be exposed in measurements where later data points "drift".
 #ifdef USE_TCP_HINT
   ros::Subscriber sub = n.subscribe("bench", BASIC_BENCH_DATA_BUF, subCallback, ros::TransportHints().tcpNoDelay(true));
+  ROS_INFO("Using TCP Hint.");
 #else
   ros::Subscriber sub = n.subscribe("bench", BASIC_BENCH_DATA_BUF, subCallback);
+  ROS_INFO("Not using TCP Hint");
 #endif
 
   ROS_INFO("subscriber ready.\n\nDid you remember to empty the target folder? it is\n[%s].", BASIC_BENCH_WRITE_FOLDER);
