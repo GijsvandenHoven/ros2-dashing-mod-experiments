@@ -1,5 +1,7 @@
 #include <chrono>
 #include <memory>
+#include <fstream>
+#include <algorithm>
 
 #include "rclcpp/rclcpp.hpp"
 #include "basic_bench/msg/bench.hpp"
@@ -7,13 +9,15 @@
 
 using namespace std::chrono_literals;
 
+
+
 class BenchPublisher : public rclcpp::Node {
 public:
   BenchPublisher()
-  : Node("basic_bench_publisher"), id_(0) {
+  : Node("basic_bench_publisher"), id_(0), rate_ms(10ms) {
     publisher_ = this->create_publisher<basic_bench::msg::Bench>("bench", BASIC_BENCH_DATA_BUF);
     timer_ = this->create_wall_timer(
-      10ms, 
+      this->rate_ms, 
       std::bind(&BenchPublisher::timer_callback, this)
     );
   }
@@ -35,7 +39,18 @@ private:
       return;
     }
 
+    if (prev_stamp != no_stamp) {
+      int64_t observed_time_ns = static_cast<int64_t>(now_64b - prev_stamp);
+      int64_t expected_time_ns = static_cast<int64_t>(std::chrono::duration_cast<std::chrono::nanoseconds>(rate_ms).count());
+      AJ_buf[AJ_buf_id] = std::abs(observed_time_ns - expected_time_ns);
+      AJ_buf_id++;
+    }
+    prev_stamp = now_64b;
+
     if ((id_ - BASIC_BENCH_PUBLISHER_EXTRA) % (BASIC_BENCH_DATA_BUF * BASIC_BENCH_BATCH_PER_SIZE) == 0) {
+      writeJitterBuffer(AJ_buf, AJ_buf_size, vectorSizeSchedule[sizeScheduleIndex] + MESSAGE_BYTE_OFFSET);
+      AJ_buf_id = 0;
+
       sizeScheduleIndex++;
       int scheduledSize = vectorSizeSchedule[sizeScheduleIndex];
       RCLCPP_INFO(this->get_logger(), "ID [%d], switch to size [%d]", id_, scheduledSize);
@@ -58,16 +73,52 @@ private:
     }
   }
 
+  /** helper functions */
+  template <typename T>
+  void writeJitterBuffer(T buf, uint32_t buf_size, int message_size) {
+    static_assert(std::is_pointer<T>::value, "buffer must be a pointer");
+
+    std::string suffix = std::string("jitter") + std::to_string(message_size);
+    std::string path = std::string(BASIC_BENCH_JITTER_FOLDER) + suffix;
+    
+    std::ofstream file(path);
+    if (!file) {
+      RCLCPP_ERROR(this->get_logger(), "could not open file");
+      exit(-1);
+    }
+    // write a simple header for the file
+    file << buf_size << " measurements\n";
+
+    std::for_each(buf, buf + buf_size, [&file](auto measurement){
+      file << measurement << '\n';
+    });
+  }
+
+  // duplicated from subscriber.cpp
+  template <typename T>
+  void zeroBuffer(T buf, uint32_t siz) {
+    static_assert(std::is_pointer<T>::value, "buffer must be a pointer");
+    std::fill(buf, buf+siz, 0);
+  }
+
   /** member declarations */
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Publisher<basic_bench::msg::Bench>::SharedPtr publisher_;
   size_t id_;
+
+  std::chrono::milliseconds rate_ms; // this is needed to remember the rate outside of the node constructor
 
   static const int MESSAGE_BYTE_OFFSET = 16; // timestamp is 8 byte, id is 4 byte, serialized vector is preceded by a 4 byte length.
   int sizeTarget(int target) { return target - MESSAGE_BYTE_OFFSET; };
 
   int sizeScheduleIndex = 0;
   int vectorSizeSchedule[8] = {sizeTarget(16), sizeTarget(32), sizeTarget(64), sizeTarget(256), sizeTarget(1024), sizeTarget(4096), sizeTarget(65536), -1};
+
+  static constexpr int AJ_buf_size = (BASIC_BENCH_DATA_BUF * BASIC_BENCH_BATCH_PER_SIZE) - 1;
+  int64_t AJ_buf[AJ_buf_size];
+  int AJ_buf_id = 0;
+  uint64_t no_stamp = ~(0U);
+  uint64_t prev_stamp = no_stamp;
 };
 
 int main(int argc, char * argv[]) {
