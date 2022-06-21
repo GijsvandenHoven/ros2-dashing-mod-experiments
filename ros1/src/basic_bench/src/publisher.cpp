@@ -16,7 +16,7 @@ int sizeTarget(int target) { return target - MESSAGE_BYTE_OFFSET; };
 int vectorSizeSchedule[] = {sizeTarget(16), sizeTarget(32), sizeTarget(64), sizeTarget(256), sizeTarget(1024), sizeTarget(4096), sizeTarget(65536), -1};
 int sizeScheduleIndex = 0;
 
-constexpr int AJ_buf_size = (BASIC_BENCH_DATA_BUF * BASIC_BENCH_BATCH_PER_SIZE) - 1;
+constexpr int AJ_buf_size = (BASIC_BENCH_DATA_BUF * BASIC_BENCH_BATCH_PER_SIZE);
 int64_t AJ_buf[AJ_buf_size];
 int AJ_buf_id = 0;
 
@@ -57,17 +57,18 @@ int main(int argc, char **argv)
   ros::Publisher pub = n.advertise<basic_bench::Bench>("bench", BASIC_BENCH_DATA_BUF);
 
   int rate_per_second = 100; // need to use this number later
+  uint64_t nanosecond_time_between_message_expected = (1000000000 / rate_per_second);// assumes integer divisble. beware.
+  uint64_t nanosecond_time_message_jitter;
+  uint64_t nanosecond_time_message_expected; // first measurement + i * ns_time_between
+
+  zeroBuffer(AJ_buf, AJ_buf_size);
+
   ros::Rate loop_rate(rate_per_second);
   int id = 0;
-  // activation jitter tracking
-  const uint64_t stamp_unset = ~(0U);
-  uint64_t prev_stamp = stamp_unset;
-  zeroBuffer(AJ_buf, AJ_buf_size);
   while (ros::ok())
   {
     basic_bench::Bench msg; // note to self: It appears this default initializes everything, including the vector. 
 
-    
     msg.id = id;
     msg.junk.resize(vectorSizeSchedule[sizeScheduleIndex]); // https://cplusplus.com/reference/vector/vector/resize/ -- "if val is specified (...) otherwise, they are value-initialized". In the case of chars, that's setting it all to zeroes.
     // there is ros::Time::now().toNSec() but we want to stay consistent with ROS2
@@ -82,22 +83,22 @@ int main(int argc, char **argv)
     
     pub.publish(msg);
 
-    ++id;
+    if (id == 0) {
+      nanosecond_time_message_expected = now_64b; 
+    }
+    nanosecond_time_message_expected += nanosecond_time_between_message_expected;
 
+    // <Notice Me> increment of ID is done here.
+    id++;
     if (id <= BASIC_BENCH_PUBLISHER_EXTRA) { // synchronisation with publisher: the first (X) do not contribute to the schedule.
       loop_rate.sleep();
       continue;
     };
 
-    // record activation jitter by comparing with the previous stamp
-    if (prev_stamp != stamp_unset) {
-      int64_t nanosecond_time_between_message_observed = static_cast<int64_t>(now_64b - prev_stamp); // assume the difference (in nanoseconds) is in the signed range.
-      int64_t nanosecond_time_between_message_expected = (1000000000 / rate_per_second);// assumes integer divisble. beware.
-
-      AJ_buf[AJ_buf_id] = std::abs( nanosecond_time_between_message_observed - nanosecond_time_between_message_expected );
-      AJ_buf_id++;
-    }
-    prev_stamp = now_64b;
+    // record activation jitter by comparing with the expected stamp
+    nanosecond_time_message_jitter = (static_cast<int64_t>(now_64b - nanosecond_time_message_expected));
+    AJ_buf[AJ_buf_id] = nanosecond_time_message_jitter;
+    AJ_buf_id++;
 
     // when this is the case, enough data for one message size has been written. Go to the next size.
     if ((id - BASIC_BENCH_PUBLISHER_EXTRA) % (BASIC_BENCH_DATA_BUF * BASIC_BENCH_BATCH_PER_SIZE) == 0) {
