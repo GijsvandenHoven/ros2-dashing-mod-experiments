@@ -49,6 +49,8 @@ private:
     AJ_buf[AJ_buf_id] = nanosecond_time_message_jitter;
     AJ_buf_id++;
 
+    // ROS_INFO("Expect: [%ld], Got: [%ld]. Diff: [%ld]", nanosecond_time_message_expected, now_64b, nanosecond_time_message_jitter);
+
     if ((id_ - BASIC_BENCH_PUBLISHER_EXTRA) % (BASIC_BENCH_DATA_BUF * BASIC_BENCH_BATCH_PER_SIZE) == 0) {
       writeJitterBuffer(AJ_buf, AJ_buf_size, vectorSizeSchedule[sizeScheduleIndex] + MESSAGE_BYTE_OFFSET);
       AJ_buf_id = 0;

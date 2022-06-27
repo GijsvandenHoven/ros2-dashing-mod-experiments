@@ -9,5 +9,8 @@
 #define BASIC_BENCH_BATCH_PER_SIZE 5
 #define BASIC_BENCH_PUBLISHER_EXTRA 100
 
+// this is a convenience macro to have logging the same for me between ROS versions.
+#define ROS_INFO(_STR, ...) RCLCPP_INFO(this->get_logger(), _STR, ##__VA_ARGS__)
+
 
 #endif // PUB_SUB_CONFIG

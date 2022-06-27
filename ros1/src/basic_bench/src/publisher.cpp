@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <type_traits>
 #include <fstream>
+#include <ctime> // for printing the date on the output header
 
 #ifdef USE_CHRONO
 #include <chrono>
@@ -33,7 +34,15 @@ void writeJitterBuffer(T buf, uint32_t buf_size, int message_size) {
     exit(-1);
   }
   // write a simple header for the file
-  file << buf_size << " measurements\n";
+  {
+    file << buf_size << " measurements ";
+    const int MAXLEN = 80;
+    char s[MAXLEN];
+    time_t t = time(0);
+    strftime(s, MAXLEN, "%m/%d/%Y - %H:%M:%S", localtime(&t));
+    file << s << "\n";
+  }
+
 
   std::for_each(buf, buf + buf_size, [&file](auto measurement){
     file << measurement << '\n';
