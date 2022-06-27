@@ -56,14 +56,13 @@ int main(int argc, char **argv)
   //note to self: second parameter is a buffer used for holding messages before they get sent.
   ros::Publisher pub = n.advertise<basic_bench::Bench>("bench", BASIC_BENCH_DATA_BUF);
 
-  int rate_per_second = 100; // need to use this number later
-  uint64_t nanosecond_time_between_message_expected = (1000000000 / rate_per_second);// assumes integer divisble. beware.
+  uint64_t nanosecond_time_between_message_expected = (1000000000 / BASIC_BENCH_LOOP_RATE);// assumes integer divisble. beware.
   uint64_t nanosecond_time_message_jitter;
   uint64_t nanosecond_time_message_expected; // first measurement + i * ns_time_between
 
   zeroBuffer(AJ_buf, AJ_buf_size);
 
-  ros::Rate loop_rate(rate_per_second);
+  ros::Rate loop_rate(BASIC_BENCH_LOOP_RATE);
   int id = 0;
   while (ros::ok())
   {
@@ -99,6 +98,8 @@ int main(int argc, char **argv)
     nanosecond_time_message_jitter = (static_cast<int64_t>(now_64b - nanosecond_time_message_expected));
     AJ_buf[AJ_buf_id] = nanosecond_time_message_jitter;
     AJ_buf_id++;
+
+    // ROS_INFO("Expect: [%ld]. Got: [%ld]. Diff:[%ld]", nanosecond_time_message_expected, now_64b, nanosecond_time_message_jitter);
 
     // when this is the case, enough data for one message size has been written. Go to the next size.
     if ((id - BASIC_BENCH_PUBLISHER_EXTRA) % (BASIC_BENCH_DATA_BUF * BASIC_BENCH_BATCH_PER_SIZE) == 0) {
