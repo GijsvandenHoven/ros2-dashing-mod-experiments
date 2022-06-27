@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "publisher");
+  ros::init(argc, argv, "bridge_publisher");
 
   ros::NodeHandle n;
 
@@ -19,7 +19,9 @@ int main(int argc, char **argv)
     msg.id = id++;
     msg.junk.resize(10);
 
-    ROS_INFO(" %d", msg.id);
+    pub.publish(msg);
+    
+    ROS_INFO("send %d", msg.id);
 
     loop_rate.sleep();
   }

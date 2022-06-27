@@ -139,8 +139,8 @@ add_executable(bridge_bench_publisher src/publisher.cpp)
 target_link_libraries(bridge_bench_publisher ${catkin_LIBRARIES})
 # add_dependencies(bridge_bench_publisher bridge_bench_generate_messages_cpp)
 
-# add_executable(basic_bench_subscriber src/subscriber.cpp)
-# target_link_libraries(basic_bench_subscriber ${catkin_LIBRARIES})
+add_executable(bridge_bench_subscriber src/subscriber.cpp)
+target_link_libraries(bridge_bench_subscriber ${catkin_LIBRARIES})
 # add_dependencies(basic_bench_subscriber basic_bench_generate_messages_cpp)
 
 ## Rename C++ executable without prefix
