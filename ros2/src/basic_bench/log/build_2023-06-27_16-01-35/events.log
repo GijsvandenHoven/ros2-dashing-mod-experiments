@@ -1,0 +1,348 @@
+[0.000000] (-) TimerEvent: {}
+[0.001600] (basic_bench) JobQueued: {'identifier': 'basic_bench', 'dependencies': OrderedDict()}
+[0.005352] (basic_bench) JobStarted: {'identifier': 'basic_bench'}
+[0.065643] (basic_bench) JobProgress: {'identifier': 'basic_bench', 'progress': 'cmake'}
+[0.066031] (basic_bench) Command: {'cmd': ['/usr/bin/cmake', '/home/ruben/june-measurements/ros2/src/basic_bench', '-DCMAKE_INSTALL_PREFIX=/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench'], 'cwd': '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ruben'), ('LC_TIME', 'nl_NL.UTF-8'), ('TEXTDOMAIN', 'im-config'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1478'), ('XDG_SESSION_TYPE', 'x11'), ('ROS_PACKAGE_PATH', '/home/ruben/catkin_ws/src:/opt/ros/melodic/share'), ('LD_LIBRARY_PATH', '/home/ruben/june-measurements/ros2/install/basic_bench/lib:/opt/ros/dashing/opt/yaml_cpp_vendor/lib:/opt/ros/dashing/opt/rviz_ogre_vendor/lib:/opt/ros/dashing/lib:/home/ruben/catkin_ws/devel/lib:/opt/ros/melodic/lib'), ('ROS_ETC_DIR', '/opt/ros/melodic/etc/ros'), ('SHLVL', '1'), ('OLDPWD', '/home/ruben/june-measurements/ros2/src'), ('QT4_IM_MODULE', 'xim'), ('HOME', '/home/ruben'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'nl_NL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/ruben/june-measurements/ros2/install'), ('IM_CONFIG_PHASE', '2'), ('ROS_DISTRO', 'dashing'), ('LOGNAME', 'ruben'), ('GTK_IM_MODULE', 'ibus'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/ruben/catkin_ws/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig'), ('USERNAME', 'ruben'), ('XDG_SESSION_ID', '1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '1'), ('PATH', '/opt/ros/dashing/bin:/opt/ros/melodic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ruben-VirtualBox:@/tmp/.ICE-unix/1347,unix/ruben-VirtualBox:/tmp/.ICE-unix/1347'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d65079d6_d10c_4848_91c6_660408df0cac'), ('LC_ADDRESS', 'nl_NL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nl_NL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('ROS_ROOT', '/opt/ros/melodic/share/ros'), ('XMODIFIERS', '@im=ibus'), ('GNOME_TERMINAL_SERVICE', ':1.63'), ('ROSLISP_PACKAGE_DIRECTORIES', '/home/ruben/catkin_ws/devel/share/common-lisp'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('AMENT_PREFIX_PATH', '/home/ruben/june-measurements/ros2/install/bridge_bench:/home/ruben/june-measurements/ros2/install/basic_bench:/opt/ros/dashing'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('LC_NAME', 'nl_NL.UTF-8'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nl_NL.UTF-8'), ('TEXTDOMAINDIR', '/usr/share/locale/'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nl_NL.UTF-8'), ('XDG_VTNR', '1'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('LC_NUMERIC', 'nl_NL.UTF-8'), ('PYTHONPATH', '/home/ruben/june-measurements/ros2/install/basic_bench/lib/python3.6/site-packages:/opt/ros/dashing/lib/python3.6/site-packages:/home/ruben/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages'), ('LC_PAPER', 'nl_NL.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '5202'), ('EDITOR', 'code .'), ('CMAKE_PREFIX_PATH', '/home/ruben/june-measurements/ros2/install/bridge_bench:/home/ruben/june-measurements/ros2/install/basic_bench:/opt/ros/dashing:/home/ruben/catkin_ws/devel:/opt/ros/melodic')]), 'shell': False}
+[0.100470] (-) TimerEvent: {}
+[0.204186] (-) TimerEvent: {}
+[0.305235] (-) TimerEvent: {}
+[0.406690] (-) TimerEvent: {}
+[0.508575] (-) TimerEvent: {}
+[0.611735] (-) TimerEvent: {}
+[0.709150] (basic_bench) StdoutLine: {'line': b'-- The C compiler identification is GNU 7.5.0\n'}
+[0.712320] (-) TimerEvent: {}
+[0.813346] (-) TimerEvent: {}
+[0.929143] (-) TimerEvent: {}
+[1.032383] (-) TimerEvent: {}
+[1.137160] (-) TimerEvent: {}
+[1.241030] (-) TimerEvent: {}
+[1.263513] (basic_bench) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 7.5.0\n'}
+[1.288252] (basic_bench) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[1.341161] (-) TimerEvent: {}
+[1.441708] (-) TimerEvent: {}
+[1.470058] (basic_bench) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[1.471824] (basic_bench) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.545034] (-) TimerEvent: {}
+[1.571328] (basic_bench) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.577730] (basic_bench) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.645658] (-) TimerEvent: {}
+[1.746310] (-) TimerEvent: {}
+[1.847127] (-) TimerEvent: {}
+[1.880252] (basic_bench) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.887126] (basic_bench) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[1.947320] (-) TimerEvent: {}
+[2.004343] (basic_bench) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[2.005383] (basic_bench) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.050335] (-) TimerEvent: {}
+[2.121934] (basic_bench) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.127535] (basic_bench) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.151116] (-) TimerEvent: {}
+[2.258191] (-) TimerEvent: {}
+[2.384164] (-) TimerEvent: {}
+[2.484835] (-) TimerEvent: {}
+[2.589883] (-) TimerEvent: {}
+[2.692785] (-) TimerEvent: {}
+[2.744863] (basic_bench) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.762642] (basic_bench) StdoutLine: {'line': b'-- Found ament_cmake: 0.7.6 (/opt/ros/dashing/share/ament_cmake/cmake)\n'}
+[2.793806] (-) TimerEvent: {}
+[2.814931] (basic_bench) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") \n'}
+[2.815378] (basic_bench) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.899403] (-) TimerEvent: {}
+[3.136723] (-) TimerEvent: {}
+[3.243227] (-) TimerEvent: {}
+[3.345112] (-) TimerEvent: {}
+[3.372671] (basic_bench) StdoutLine: {'line': b'-- Found rclcpp: 0.7.16 (/opt/ros/dashing/share/rclcpp/cmake)\n'}
+[3.446162] (-) TimerEvent: {}
+[3.449371] (basic_bench) StdoutLine: {'line': b'-- Found rosidl_adapter: 0.7.10 (/opt/ros/dashing/share/rosidl_adapter/cmake)\n'}
+[3.547037] (-) TimerEvent: {}
+[3.554417] (basic_bench) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 0.7.2 (/opt/ros/dashing/share/rmw_implementation_cmake/cmake)\n'}
+[3.561776] (basic_bench) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.567087] (basic_bench) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[3.647687] (-) TimerEvent: {}
+[3.728462] (basic_bench) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[3.730378] (basic_bench) StdoutLine: {'line': b'-- Looking for pthread_create\n'}
+[3.748420] (-) TimerEvent: {}
+[3.835792] (basic_bench) StdoutLine: {'line': b'-- Looking for pthread_create - not found\n'}
+[3.840560] (basic_bench) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[3.849284] (-) TimerEvent: {}
+[3.925534] (basic_bench) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[3.925884] (basic_bench) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[3.949518] (-) TimerEvent: {}
+[4.025449] (basic_bench) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[4.027071] (basic_bench) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[4.050189] (-) TimerEvent: {}
+[4.103748] (basic_bench) StdoutLine: {'line': b'-- Found basic_bench: 0.0.0 (/home/ruben/june-measurements/ros2/install/basic_bench/share/basic_bench/cmake)\n'}
+[4.115600] (basic_bench) StdoutLine: {'line': b'-- Found rosidl_default_generators: 0.7.0 (/opt/ros/dashing/share/rosidl_default_generators/cmake)\n'}
+[4.150359] (-) TimerEvent: {}
+[4.252348] (-) TimerEvent: {}
+[4.357110] (-) TimerEvent: {}
+[4.458088] (-) TimerEvent: {}
+[4.482559] (basic_bench) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1") \n'}
+[4.516944] (basic_bench) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/dashing/include  \n'}
+[4.558211] (-) TimerEvent: {}
+[4.643033] (basic_bench) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.6.9") \n'}
+[4.670561] (-) TimerEvent: {}
+[4.820097] (-) TimerEvent: {}
+[4.858648] (basic_bench) StdoutLine: {'line': b'-- Using single matching rosidl_typesupport_c: rosidl_typesupport_fastrtps_c\n'}
+[4.867816] (basic_bench) StdoutLine: {'line': b'-- Using single matching rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp\n'}
+[4.920696] (-) TimerEvent: {}
+[5.030523] (-) TimerEvent: {}
+[5.034932] (basic_bench) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3.5") \n'}
+[5.039293] (basic_bench) StdoutLine: {'line': b'-- Found python_cmake_module: 0.7.11 (/opt/ros/dashing/share/python_cmake_module/cmake)\n'}
+[5.104452] (basic_bench) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.6m.so (found suitable version "3.6.9", minimum required is "3.5") \n'}
+[5.104897] (basic_bench) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.104985] (basic_bench) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.6m\n'}
+[5.105084] (basic_bench) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.6m.so\n'}
+[5.137114] (-) TimerEvent: {}
+[5.142879] (basic_bench) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[5.237404] (-) TimerEvent: {}
+[5.343833] (-) TimerEvent: {}
+[5.353143] (basic_bench) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.7.12 (/opt/ros/dashing/share/ament_lint_auto/cmake)\n'}
+[5.444946] (basic_bench) StdoutLine: {'line': b"-- Added test 'copyright' to check for copyright in CMake / C / C++ / Python code\n"}
+[5.445253] (-) TimerEvent: {}
+[5.453392] (basic_bench) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[5.455378] (basic_bench) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_generator_c;/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_typesupport_c;/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_typesupport_fastrtps_c;/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_generator_cpp;/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_typesupport_fastrtps_cpp;/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_typesupport_introspection_c;/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_generator_py\n'}
+[5.464193] (basic_bench) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[5.467082] (basic_bench) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[5.470535] (basic_bench) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[5.475375] (basic_bench) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[5.484427] (basic_bench) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[5.487030] (basic_bench) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[5.495072] (basic_bench) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.545791] (-) TimerEvent: {}
+[5.605302] (basic_bench) StdoutLine: {'line': b'-- Generating done\n'}
+[5.622632] (basic_bench) StdoutLine: {'line': b'-- Build files have been written to: /home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench\n'}
+[5.623078] (basic_bench) CommandEnded: {'returncode': 0}
+[5.628105] (basic_bench) JobProgress: {'identifier': 'basic_bench', 'progress': 'build'}
+[5.628403] (basic_bench) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench', '--', '-j2', '-l2'], 'cwd': '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ruben'), ('LC_TIME', 'nl_NL.UTF-8'), ('TEXTDOMAIN', 'im-config'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1478'), ('XDG_SESSION_TYPE', 'x11'), ('ROS_PACKAGE_PATH', '/home/ruben/catkin_ws/src:/opt/ros/melodic/share'), ('LD_LIBRARY_PATH', '/home/ruben/june-measurements/ros2/install/basic_bench/lib:/opt/ros/dashing/opt/yaml_cpp_vendor/lib:/opt/ros/dashing/opt/rviz_ogre_vendor/lib:/opt/ros/dashing/lib:/home/ruben/catkin_ws/devel/lib:/opt/ros/melodic/lib'), ('ROS_ETC_DIR', '/opt/ros/melodic/etc/ros'), ('SHLVL', '1'), ('OLDPWD', '/home/ruben/june-measurements/ros2/src'), ('QT4_IM_MODULE', 'xim'), ('HOME', '/home/ruben'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'nl_NL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/ruben/june-measurements/ros2/install'), ('IM_CONFIG_PHASE', '2'), ('ROS_DISTRO', 'dashing'), ('LOGNAME', 'ruben'), ('GTK_IM_MODULE', 'ibus'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/ruben/catkin_ws/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig'), ('USERNAME', 'ruben'), ('XDG_SESSION_ID', '1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '1'), ('PATH', '/opt/ros/dashing/bin:/opt/ros/melodic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ruben-VirtualBox:@/tmp/.ICE-unix/1347,unix/ruben-VirtualBox:/tmp/.ICE-unix/1347'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d65079d6_d10c_4848_91c6_660408df0cac'), ('LC_ADDRESS', 'nl_NL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nl_NL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('ROS_ROOT', '/opt/ros/melodic/share/ros'), ('XMODIFIERS', '@im=ibus'), ('GNOME_TERMINAL_SERVICE', ':1.63'), ('ROSLISP_PACKAGE_DIRECTORIES', '/home/ruben/catkin_ws/devel/share/common-lisp'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('AMENT_PREFIX_PATH', '/home/ruben/june-measurements/ros2/install/bridge_bench:/home/ruben/june-measurements/ros2/install/basic_bench:/opt/ros/dashing'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('LC_NAME', 'nl_NL.UTF-8'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nl_NL.UTF-8'), ('TEXTDOMAINDIR', '/usr/share/locale/'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nl_NL.UTF-8'), ('XDG_VTNR', '1'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('LC_NUMERIC', 'nl_NL.UTF-8'), ('PYTHONPATH', '/home/ruben/june-measurements/ros2/install/basic_bench/lib/python3.6/site-packages:/opt/ros/dashing/lib/python3.6/site-packages:/home/ruben/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages'), ('LC_PAPER', 'nl_NL.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '5202'), ('EDITOR', 'code .'), ('CMAKE_PREFIX_PATH', '/home/ruben/june-measurements/ros2/install/bridge_bench:/home/ruben/june-measurements/ros2/install/basic_bench:/opt/ros/dashing:/home/ruben/catkin_ws/devel:/opt/ros/melodic')]), 'shell': False}
+[5.646054] (-) TimerEvent: {}
+[5.695250] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench__cpp\x1b[0m\n'}
+[5.699080] (basic_bench) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[5.716127] (basic_bench) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[5.751772] (-) TimerEvent: {}
+[5.874202] (-) TimerEvent: {}
+[5.989152] (-) TimerEvent: {}
+[6.112490] (-) TimerEvent: {}
+[6.208725] (basic_bench) StdoutLine: {'line': b'[  6%] Built target basic_bench__cpp\n'}
+[6.213698] (-) TimerEvent: {}
+[6.230029] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench_subscriber\x1b[0m\n'}
+[6.290894] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench__rosidl_generator_c\x1b[0m\n'}
+[6.320778] (-) TimerEvent: {}
+[6.327457] (basic_bench) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/basic_bench__rosidl_generator_c.dir/rosidl_generator_c/basic_bench/msg/bench__functions.c.o\x1b[0m\n'}
+[6.421135] (-) TimerEvent: {}
+[6.483157] (basic_bench) StdoutLine: {'line': b'[ 12%] \x1b[32m\x1b[1mLinking C shared library libbasic_bench__rosidl_generator_c.so\x1b[0m\n'}
+[6.521735] (-) TimerEvent: {}
+[6.541733] (basic_bench) StdoutLine: {'line': b'[ 12%] Built target basic_bench__rosidl_generator_c\n'}
+[6.568258] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench_publisher\x1b[0m\n'}
+[6.637276] (-) TimerEvent: {}
+[6.675130] (basic_bench) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/basic_bench_subscriber.dir/src/subscriber.cpp.o\x1b[0m\n'}
+[6.679572] (basic_bench) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/basic_bench_publisher.dir/src/publisher.cpp.o\x1b[0m\n'}
+[6.737609] (-) TimerEvent: {}
+[6.838228] (-) TimerEvent: {}
+[6.938782] (-) TimerEvent: {}
+[7.072531] (-) TimerEvent: {}
+[7.334845] (-) TimerEvent: {}
+[7.452782] (-) TimerEvent: {}
+[8.815642] (-) TimerEvent: {}
+[9.795887] (-) TimerEvent: {}
+[9.904078] (-) TimerEvent: {}
+[10.011550] (-) TimerEvent: {}
+[10.118969] (-) TimerEvent: {}
+[10.226601] (-) TimerEvent: {}
+[10.344731] (-) TimerEvent: {}
+[10.462965] (-) TimerEvent: {}
+[10.570446] (-) TimerEvent: {}
+[10.850741] (-) TimerEvent: {}
+[10.901533] (basic_bench) StdoutLine: {'line': b'[ 21%] \x1b[32m\x1b[1mLinking CXX executable basic_bench_publisher\x1b[0m\n'}
+[11.006026] (-) TimerEvent: {}
+[11.029573] (basic_bench) StdoutLine: {'line': b'[ 24%] \x1b[32m\x1b[1mLinking CXX executable basic_bench_subscriber\x1b[0m\n'}
+[11.106359] (-) TimerEvent: {}
+[11.144860] (basic_bench) StdoutLine: {'line': b'[ 24%] Built target basic_bench_publisher\n'}
+[11.165467] (basic_bench) StdoutLine: {'line': b'[ 27%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[11.348721] (-) TimerEvent: {}
+[11.365006] (basic_bench) StdoutLine: {'line': b'[ 27%] Built target basic_bench_subscriber\n'}
+[11.380168] (basic_bench) StdoutLine: {'line': b'[ 30%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[11.483105] (-) TimerEvent: {}
+[11.506847] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[11.550444] (basic_bench) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/basic_bench__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/basic_bench/msg/dds_fastrtps/bench__type_support.cpp.o\x1b[0m\n'}
+[11.594558] (-) TimerEvent: {}
+[11.953034] (-) TimerEvent: {}
+[11.980243] (basic_bench) StdoutLine: {'line': b'[ 36%] \x1b[32m\x1b[1mLinking CXX shared library libbasic_bench__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[12.028736] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[12.084502] (-) TimerEvent: {}
+[12.112423] (basic_bench) StdoutLine: {'line': b'[ 36%] Built target basic_bench__rosidl_typesupport_fastrtps_cpp\n'}
+[12.134146] (basic_bench) StdoutLine: {'line': b'[ 39%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[12.161266] (basic_bench) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/basic_bench__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/basic_bench/msg/bench__type_support.cpp.o\x1b[0m\n'}
+[12.215088] (-) TimerEvent: {}
+[12.355701] (-) TimerEvent: {}
+[12.450600] (basic_bench) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking CXX shared library libbasic_bench__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[12.455908] (-) TimerEvent: {}
+[12.458928] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[12.485471] (basic_bench) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/basic_bench__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/basic_bench/msg/bench__type_support.c.o\x1b[0m\n'}
+[12.533905] (basic_bench) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking C shared library libbasic_bench__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[12.549268] (basic_bench) StdoutLine: {'line': b'[ 51%] Built target basic_bench__rosidl_typesupport_introspection_cpp\n'}
+[12.558678] (-) TimerEvent: {}
+[12.565474] (basic_bench) StdoutLine: {'line': b'[ 54%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[12.579675] (basic_bench) StdoutLine: {'line': b'[ 54%] Built target basic_bench__rosidl_typesupport_introspection_c\n'}
+[12.599598] (basic_bench) StdoutLine: {'line': b'[ 57%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[12.668317] (-) TimerEvent: {}
+[12.825367] (-) TimerEvent: {}
+[12.889647] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench__rosidl_typesupport_cpp\x1b[0m\n'}
+[12.928658] (-) TimerEvent: {}
+[12.940893] (basic_bench) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/basic_bench__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/basic_bench/msg/bench__type_support.cpp.o\x1b[0m\n'}
+[12.943362] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[12.986619] (basic_bench) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/basic_bench__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/basic_bench/msg/bench__type_support_c.cpp.o\x1b[0m\n'}
+[13.330073] (-) TimerEvent: {}
+[13.350059] (basic_bench) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX shared library libbasic_bench__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[13.358950] (basic_bench) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libbasic_bench__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[13.463785] (-) TimerEvent: {}
+[13.483227] (basic_bench) StdoutLine: {'line': b'[ 69%] Built target basic_bench__rosidl_typesupport_fastrtps_c\n'}
+[13.500424] (basic_bench) StdoutLine: {'line': b'[ 69%] Built target basic_bench__rosidl_typesupport_cpp\n'}
+[13.504297] (basic_bench) StdoutLine: {'line': b'[ 72%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[13.588453] (-) TimerEvent: {}
+[13.717768] (-) TimerEvent: {}
+[13.766429] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench__rosidl_typesupport_c\x1b[0m\n'}
+[13.786825] (basic_bench) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/basic_bench__rosidl_typesupport_c.dir/rosidl_typesupport_c/basic_bench/msg/bench__type_support.cpp.o\x1b[0m\n'}
+[13.818425] (-) TimerEvent: {}
+[13.830140] (basic_bench) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libbasic_bench__rosidl_typesupport_c.so\x1b[0m\n'}
+[13.897560] (basic_bench) StdoutLine: {'line': b'[ 78%] Built target basic_bench__rosidl_typesupport_c\n'}
+[13.914804] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench\x1b[0m\n'}
+[13.918627] (-) TimerEvent: {}
+[13.933778] (basic_bench) StdoutLine: {'line': b'[ 78%] Built target basic_bench\n'}
+[13.953012] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench__py\x1b[0m\n'}
+[13.971342] (basic_bench) StdoutLine: {'line': b'[ 81%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[14.019329] (-) TimerEvent: {}
+[14.194933] (-) TimerEvent: {}
+[14.295830] (-) TimerEvent: {}
+[14.399413] (-) TimerEvent: {}
+[14.467048] (basic_bench) StdoutLine: {'line': b'[ 81%] Built target basic_bench__py\n'}
+[14.483154] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench__python\x1b[0m\n'}
+[14.499995] (-) TimerEvent: {}
+[14.598850] (basic_bench) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/basic_bench__python.dir/rosidl_generator_py/basic_bench/msg/_bench_s.c.o\x1b[0m\n'}
+[14.600521] (-) TimerEvent: {}
+[14.707348] (-) TimerEvent: {}
+[14.740580] (basic_bench) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/basic_bench/libbasic_bench__python.so\x1b[0m\n'}
+[14.810045] (-) TimerEvent: {}
+[14.812747] (basic_bench) StdoutLine: {'line': b'[ 87%] Built target basic_bench__python\n'}
+[14.829303] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[14.831085] (basic_bench) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target basic_bench__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[14.862467] (basic_bench) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/basic_bench__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/basic_bench/_basic_bench_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[14.873741] (basic_bench) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/basic_bench__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/basic_bench/_basic_bench_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[14.911548] (-) TimerEvent: {}
+[14.974563] (basic_bench) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/basic_bench/basic_bench_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so\x1b[0m\n'}
+[14.975439] (basic_bench) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/basic_bench/basic_bench_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so\x1b[0m\n'}
+[15.018871] (-) TimerEvent: {}
+[15.034101] (basic_bench) StdoutLine: {'line': b'[100%] Built target basic_bench__rosidl_typesupport_fastrtps_c__pyext\n'}
+[15.035506] (basic_bench) StdoutLine: {'line': b'[100%] Built target basic_bench__rosidl_typesupport_c__pyext\n'}
+[15.060589] (basic_bench) CommandEnded: {'returncode': 0}
+[15.119810] (-) TimerEvent: {}
+[15.190606] (basic_bench) JobProgress: {'identifier': 'basic_bench', 'progress': 'install'}
+[15.204725] (basic_bench) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench', '--target', 'install', '--', '-j2', '-l2'], 'cwd': '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ruben'), ('LC_TIME', 'nl_NL.UTF-8'), ('TEXTDOMAIN', 'im-config'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1478'), ('XDG_SESSION_TYPE', 'x11'), ('ROS_PACKAGE_PATH', '/home/ruben/catkin_ws/src:/opt/ros/melodic/share'), ('LD_LIBRARY_PATH', '/home/ruben/june-measurements/ros2/install/basic_bench/lib:/opt/ros/dashing/opt/yaml_cpp_vendor/lib:/opt/ros/dashing/opt/rviz_ogre_vendor/lib:/opt/ros/dashing/lib:/home/ruben/catkin_ws/devel/lib:/opt/ros/melodic/lib'), ('ROS_ETC_DIR', '/opt/ros/melodic/etc/ros'), ('SHLVL', '1'), ('OLDPWD', '/home/ruben/june-measurements/ros2/src'), ('QT4_IM_MODULE', 'xim'), ('HOME', '/home/ruben'), ('DESKTOP_SESSION', 'ubuntu'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'nl_NL.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/ruben/june-measurements/ros2/install'), ('IM_CONFIG_PHASE', '2'), ('ROS_DISTRO', 'dashing'), ('LOGNAME', 'ruben'), ('GTK_IM_MODULE', 'ibus'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/ruben/catkin_ws/devel/lib/pkgconfig:/opt/ros/melodic/lib/pkgconfig'), ('USERNAME', 'ruben'), ('XDG_SESSION_ID', '1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '1'), ('PATH', '/opt/ros/dashing/bin:/opt/ros/melodic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ruben-VirtualBox:@/tmp/.ICE-unix/1347,unix/ruben-VirtualBox:/tmp/.ICE-unix/1347'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d65079d6_d10c_4848_91c6_660408df0cac'), ('LC_ADDRESS', 'nl_NL.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nl_NL.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('ROS_ROOT', '/opt/ros/melodic/share/ros'), ('XMODIFIERS', '@im=ibus'), ('GNOME_TERMINAL_SERVICE', ':1.63'), ('ROSLISP_PACKAGE_DIRECTORIES', '/home/ruben/catkin_ws/devel/share/common-lisp'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('AMENT_PREFIX_PATH', '/home/ruben/june-measurements/ros2/install/bridge_bench:/home/ruben/june-measurements/ros2/install/basic_bench:/opt/ros/dashing'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('LC_NAME', 'nl_NL.UTF-8'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nl_NL.UTF-8'), ('TEXTDOMAINDIR', '/usr/share/locale/'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nl_NL.UTF-8'), ('XDG_VTNR', '1'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench'), ('CLUTTER_IM_MODULE', 'xim'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('LC_NUMERIC', 'nl_NL.UTF-8'), ('PYTHONPATH', '/home/ruben/june-measurements/ros2/install/basic_bench/lib/python3.6/site-packages:/opt/ros/dashing/lib/python3.6/site-packages:/home/ruben/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages'), ('LC_PAPER', 'nl_NL.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '5202'), ('EDITOR', 'code .'), ('CMAKE_PREFIX_PATH', '/home/ruben/june-measurements/ros2/install/bridge_bench:/home/ruben/june-measurements/ros2/install/basic_bench:/opt/ros/dashing:/home/ruben/catkin_ws/devel:/opt/ros/melodic')]), 'shell': False}
+[15.220287] (-) TimerEvent: {}
+[15.289720] (basic_bench) StdoutLine: {'line': b'[ 12%] Built target basic_bench__rosidl_generator_c\n'}
+[15.291315] (basic_bench) StdoutLine: {'line': b'[ 12%] Built target basic_bench__cpp\n'}
+[15.327007] (-) TimerEvent: {}
+[15.329901] (basic_bench) StdoutLine: {'line': b'[ 18%] Built target basic_bench_subscriber\n'}
+[15.330835] (basic_bench) StdoutLine: {'line': b'[ 24%] Built target basic_bench_publisher\n'}
+[15.366994] (basic_bench) StdoutLine: {'line': b'[ 33%] Built target basic_bench__rosidl_typesupport_introspection_cpp\n'}
+[15.371682] (basic_bench) StdoutLine: {'line': b'[ 42%] Built target basic_bench__rosidl_typesupport_fastrtps_cpp\n'}
+[15.403015] (basic_bench) StdoutLine: {'line': b'[ 51%] Built target basic_bench__rosidl_typesupport_introspection_c\n'}
+[15.410587] (basic_bench) StdoutLine: {'line': b'[ 60%] Built target basic_bench__rosidl_typesupport_cpp\n'}
+[15.429425] (-) TimerEvent: {}
+[15.442826] (basic_bench) StdoutLine: {'line': b'[ 69%] Built target basic_bench__rosidl_typesupport_fastrtps_c\n'}
+[15.482757] (basic_bench) StdoutLine: {'line': b'[ 78%] Built target basic_bench__rosidl_typesupport_c\n'}
+[15.514744] (basic_bench) StdoutLine: {'line': b'[ 78%] Built target basic_bench\n'}
+[15.529739] (-) TimerEvent: {}
+[15.546798] (basic_bench) StdoutLine: {'line': b'[ 81%] Built target basic_bench__py\n'}
+[15.587046] (basic_bench) StdoutLine: {'line': b'[ 87%] Built target basic_bench__python\n'}
+[15.626765] (basic_bench) StdoutLine: {'line': b'[ 93%] Built target basic_bench__rosidl_typesupport_fastrtps_c__pyext\n'}
+[15.630191] (-) TimerEvent: {}
+[15.631510] (basic_bench) StdoutLine: {'line': b'[100%] Built target basic_bench__rosidl_typesupport_c__pyext\n'}
+[15.661878] (basic_bench) StdoutLine: {'line': b'\x1b[36mInstall the project...\x1b[0m\n'}
+[15.676442] (basic_bench) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.677420] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/ament_index/resource_index/rosidl_interfaces/basic_bench\n'}
+[15.677544] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench\n'}
+[15.677623] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg\n'}
+[15.677695] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__struct.hpp\n'}
+[15.677934] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench.hpp\n'}
+[15.678033] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__traits.hpp\n'}
+[15.678419] (basic_bench) StdoutLine: {'line': b'-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench\n'}
+[15.678753] (basic_bench) StdoutLine: {'line': b'-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg\n'}
+[15.678883] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__type_support.h\n'}
+[15.678956] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/rosidl_generator_c__visibility_control.h\n'}
+[15.679025] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__functions.c\n'}
+[15.679093] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench.h\n'}
+[15.679167] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__struct.h\n'}
+[15.679235] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__functions.h\n'}
+[15.679304] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/environment/library_path.sh\n'}
+[15.679372] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_generator_c.so\n'}
+[15.679930] (basic_bench) StdoutLine: {'line': b'-- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_generator_c.so" to ""\n'}
+[15.680464] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_c.so\n'}
+[15.681052] (basic_bench) StdoutLine: {'line': b'-- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_c.so" to ""\n'}
+[15.681696] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_cpp.so\n'}
+[15.681885] (basic_bench) StdoutLine: {'line': b'-- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_cpp.so" to ""\n'}
+[15.682100] (basic_bench) StdoutLine: {'line': b'-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench\n'}
+[15.682174] (basic_bench) StdoutLine: {'line': b'-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg\n'}
+[15.682242] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__rosidl_typesupport_introspection_c.h\n'}
+[15.682313] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__type_support.c\n'}
+[15.682381] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[15.682450] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_introspection_c.so\n'}
+[15.682517] (basic_bench) StdoutLine: {'line': b'-- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_introspection_c.so" to ""\n'}
+[15.682583] (basic_bench) StdoutLine: {'line': b'-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench\n'}
+[15.682741] (basic_bench) StdoutLine: {'line': b'-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg\n'}
+[15.682829] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__rosidl_typesupport_introspection_cpp.hpp\n'}
+[15.682899] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__type_support.cpp\n'}
+[15.682971] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_introspection_cpp.so\n'}
+[15.683460] (basic_bench) StdoutLine: {'line': b'-- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[15.683852] (basic_bench) StdoutLine: {'line': b'-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench\n'}
+[15.683949] (basic_bench) StdoutLine: {'line': b'-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg\n'}
+[15.684021] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__rosidl_typesupport_fastrtps_c.h\n'}
+[15.684091] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[15.684159] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_fastrtps_c.so\n'}
+[15.684227] (basic_bench) StdoutLine: {'line': b'-- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[15.684293] (basic_bench) StdoutLine: {'line': b'-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench\n'}
+[15.684363] (basic_bench) StdoutLine: {'line': b'-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg\n'}
+[15.684430] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[15.684498] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/dds_fastrtps\n'}
+[15.684629] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[15.684758] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_fastrtps_cpp.so\n'}
+[15.685212] (basic_bench) StdoutLine: {'line': b'-- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[15.685415] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/environment/pythonpath.sh\n'}
+[15.685646] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/__init__.py\n'}
+[15.725700] (basic_bench) StdoutLine: {'line': b"Compiling '/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/__init__.py'...\n"}
+[15.730611] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/msg\n'}
+[15.731136] (-) TimerEvent: {}
+[15.731346] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/msg/__init__.py\n'}
+[15.731624] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/msg/_bench.py\n'}
+[15.731975] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/msg/_bench_s.c\n'}
+[15.744270] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/basic_bench_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so\n'}
+[15.744818] (basic_bench) StdoutLine: {'line': b'-- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/basic_bench_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so" to ""\n'}
+[15.745097] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/basic_bench_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so\n'}
+[15.745230] (basic_bench) StdoutLine: {'line': b'-- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/basic_bench_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so" to ""\n'}
+[15.745448] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__python.so\n'}
+[15.745524] (basic_bench) StdoutLine: {'line': b'-- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__python.so" to ""\n'}
+[15.745687] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/msg/Bench.idl\n'}
+[15.745852] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/msg/Bench.msg\n'}
+[15.746011] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/basic_bench/basic_bench_publisher\n'}
+[15.746241] (basic_bench) StdoutLine: {'line': b'-- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/basic_bench/basic_bench_publisher" to ""\n'}
+[15.746408] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/basic_bench/basic_bench_subscriber\n'}
+[15.746566] (basic_bench) StdoutLine: {'line': b'-- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/basic_bench/basic_bench_subscriber" to ""\n'}
+[15.746727] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/ament_index/resource_index/package_run_dependencies/basic_bench\n'}
+[15.746888] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/ament_index/resource_index/parent_prefix_path/basic_bench\n'}
+[15.747051] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/environment/ament_prefix_path.sh\n'}
+[15.747264] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/environment/path.sh\n'}
+[15.747428] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/local_setup.bash\n'}
+[15.747585] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/local_setup.sh\n'}
+[15.747749] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/local_setup.zsh\n'}
+[15.747998] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/ament_index/resource_index/packages/basic_bench\n'}
+[15.748330] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/rosidl_cmake-extras.cmake\n'}
+[15.748522] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[15.748690] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[15.748767] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/basic_benchConfig.cmake\n'}
+[15.748838] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/basic_benchConfig-version.cmake\n'}
+[15.749028] (basic_bench) StdoutLine: {'line': b'-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/package.xml\n'}
+[15.749301] (basic_bench) CommandEnded: {'returncode': 0}
+[15.831450] (-) TimerEvent: {}
+[15.932106] (-) TimerEvent: {}
+[15.969010] (basic_bench) JobEnded: {'identifier': 'basic_bench', 'rc': 0}
+[15.970616] (-) EventReactorShutdown: {}

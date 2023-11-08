@@ -3,7 +3,7 @@
 #include <fstream>
 
 #include "rclcpp/rclcpp.hpp"
-#include "basic_bench/msg/bench.hpp"
+#include "basic_bench_msgs/msg/bench.hpp"
 
 #include "config.h"
 
@@ -15,13 +15,13 @@ public:
   BenchSubscriber()
   : Node("basic_bench_subscriber")
   {
-    subscription_ = this->create_subscription<basic_bench::msg::Bench>(
+    subscription_ = this->create_subscription<basic_bench_msgs::msg::Bench>(
       "bench", BASIC_BENCH_DATA_BUF, 
       std::bind(&BenchSubscriber::topic_callback, this, _1));
   }
 
 private:
-  void topic_callback(const basic_bench::msg::Bench::SharedPtr msg) {
+  void topic_callback(const basic_bench_msgs::msg::Bench::SharedPtr msg) {
     int32_t id = msg->id;
     int64_t send_stamp = msg->stamp;
     size_t vector_size = msg->junk.size();
@@ -58,8 +58,8 @@ private:
         write_id = 0;
         mode_id++; // ensures the file written to is named appropriately.
         if (file_suffixes[mode_id] == nullptr) {
-          RCLCPP_INFO(this->get_logger(), "Done with all scheduled measurements");
-          exit(0);
+          RCLCPP_INFO(this->get_logger(), "Done with all scheduled measurements.");
+          rclcpp::shutdown();
         } else {
           RCLCPP_INFO(this->get_logger(), "ID [%d], expect size change to [%d] on the next message.", id, expected_vector_size[mode_id]);
         }
@@ -80,7 +80,8 @@ private:
       rclcpp::shutdown();
     }
     // write a simple header for the file
-    file << BASIC_BENCH_DATA_BUF << " measurements\n";
+    std::time_t today = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+    file << BASIC_BENCH_DATA_BUF << " measurements, approximate date: " << std::ctime(&today); // beware: ctime inserts a newline, try keeping this last.
 
     std::for_each(buf, buf + siz, [&file](auto measurement){
       file << measurement << '\n';
@@ -96,7 +97,7 @@ private:
   }
 
   /** member declarations */
-  rclcpp::Subscription<basic_bench::msg::Bench>::SharedPtr subscription_;
+  rclcpp::Subscription<basic_bench_msgs::msg::Bench>::SharedPtr subscription_;
 
   unsigned int expected_vector_size[7] = {0, 16, 48, 240, 1008, 4080, 65520};
   const char* file_suffixes[8] = {"_16b_", "_32b_", "_64b_", "_256b_", "_1024b_", "_4096b_", "_65536b_", nullptr};

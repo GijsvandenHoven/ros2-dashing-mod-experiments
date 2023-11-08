@@ -18,19 +18,13 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(basic_bench REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-
-# generate messages and services
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Bench.msg"
-)
+find_package(basic_bench_msgs REQUIRED)
 
 add_executable(basic_bench_publisher src/publisher.cpp)
-ament_target_dependencies(basic_bench_publisher rclcpp basic_bench)
+ament_target_dependencies(basic_bench_publisher rclcpp basic_bench_msgs)
 
 add_executable(basic_bench_subscriber src/subscriber.cpp)
-ament_target_dependencies(basic_bench_subscriber rclcpp basic_bench)
+ament_target_dependencies(basic_bench_subscriber rclcpp basic_bench_msgs)
 
 install(TARGETS
   basic_bench_publisher

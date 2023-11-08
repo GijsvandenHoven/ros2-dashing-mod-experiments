@@ -1,0 +1,103 @@
+[  9%] Built target basic_bench__rosidl_generator_c
+[ 12%] Built target basic_bench__cpp
+[35m[1mScanning dependencies of target basic_bench_subscriber[0m
+[ 18%] Built target basic_bench_publisher
+[ 21%] [32mBuilding CXX object CMakeFiles/basic_bench_subscriber.dir/src/subscriber.cpp.o[0m
+[ 30%] Built target basic_bench__rosidl_typesupport_fastrtps_cpp
+[ 39%] Built target basic_bench__rosidl_typesupport_introspection_cpp
+[ 48%] Built target basic_bench__rosidl_typesupport_introspection_c
+[ 57%] Built target basic_bench__rosidl_typesupport_cpp
+[ 66%] Built target basic_bench__rosidl_typesupport_fastrtps_c
+[ 75%] Built target basic_bench__rosidl_typesupport_c
+[ 75%] Built target basic_bench
+[ 78%] Built target basic_bench__py
+[ 84%] Built target basic_bench__python
+[ 90%] Built target basic_bench__rosidl_typesupport_c__pyext
+[ 96%] Built target basic_bench__rosidl_typesupport_fastrtps_c__pyext
+[100%] [32m[1mLinking CXX executable basic_bench_subscriber[0m
+[100%] Built target basic_bench_subscriber
+[  6%] Built target basic_bench__cpp
+[ 12%] Built target basic_bench__rosidl_generator_c
+[ 24%] Built target basic_bench_subscriber
+[ 21%] Built target basic_bench_publisher
+[ 33%] Built target basic_bench__rosidl_typesupport_introspection_cpp
+[ 42%] Built target basic_bench__rosidl_typesupport_fastrtps_cpp
+[ 51%] Built target basic_bench__rosidl_typesupport_introspection_c
+[ 60%] Built target basic_bench__rosidl_typesupport_cpp
+[ 69%] Built target basic_bench__rosidl_typesupport_fastrtps_c
+[ 78%] Built target basic_bench__rosidl_typesupport_c
+[ 78%] Built target basic_bench
+[ 81%] Built target basic_bench__py
+[ 87%] Built target basic_bench__python
+[ 93%] Built target basic_bench__rosidl_typesupport_c__pyext
+[100%] Built target basic_bench__rosidl_typesupport_fastrtps_c__pyext
+[36mInstall the project...[0m
+-- Install configuration: ""
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/ament_index/resource_index/rosidl_interfaces/basic_bench
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__struct.hpp
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench.hpp
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__traits.hpp
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__type_support.h
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/rosidl_generator_c__visibility_control.h
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__functions.c
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench.h
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__struct.h
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__functions.h
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/environment/library_path.sh
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_generator_c.so
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_c.so
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_cpp.so
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__rosidl_typesupport_introspection_c.h
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__type_support.c
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_introspection_c.so
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__type_support.cpp
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_introspection_cpp.so
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_fastrtps_c.so
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/dds_fastrtps
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_fastrtps_cpp.so
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/environment/pythonpath.sh
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/__init__.py
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/msg
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/msg/__init__.py
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/msg/_bench.py
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/msg/_bench_s.c
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/basic_bench_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/basic_bench_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__python.so
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/msg/Bench.idl
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/msg/Bench.msg
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/basic_bench/basic_bench_publisher
+-- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/basic_bench/basic_bench_subscriber
+-- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/basic_bench/basic_bench_subscriber" to ""
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/ament_index/resource_index/package_run_dependencies/basic_bench
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/ament_index/resource_index/parent_prefix_path/basic_bench
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/environment/ament_prefix_path.sh
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/environment/path.sh
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/local_setup.bash
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/local_setup.sh
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/local_setup.zsh
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/ament_index/resource_index/packages/basic_bench
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/rosidl_cmake-extras.cmake
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/basic_benchConfig.cmake
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/basic_benchConfig-version.cmake
+-- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/package.xml

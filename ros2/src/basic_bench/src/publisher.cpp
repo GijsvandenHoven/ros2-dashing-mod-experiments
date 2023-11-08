@@ -1,21 +1,20 @@
-#include <chrono>
-#include <memory>
-#include <fstream>
-#include <algorithm>
+#include <chrono> // used to measure elapsed time
+#include <ctime> // formats time for the output data header
+#include <memory> // std::fill
+#include <fstream> // writing to files
+#include <algorithm> // std::for_each
 
 #include "rclcpp/rclcpp.hpp"
-#include "basic_bench/msg/bench.hpp"
+#include "basic_bench_msgs/msg/bench.hpp"
 #include "config.h"
 
 using namespace std::chrono_literals;
-
-
 
 class BenchPublisher : public rclcpp::Node {
 public:
   BenchPublisher()
   : Node("basic_bench_publisher"), id_(0), rate_ms(10ms), nanosecond_time_message_expected(0) {
-    publisher_ = this->create_publisher<basic_bench::msg::Bench>("bench", BASIC_BENCH_DATA_BUF);
+    publisher_ = this->create_publisher<basic_bench_msgs::msg::Bench>("bench", BASIC_BENCH_DATA_BUF);
     timer_ = this->create_wall_timer(
       this->rate_ms, 
       std::bind(&BenchPublisher::timer_callback, this)
@@ -24,11 +23,11 @@ public:
 
 private:
   void timer_callback() {
-    auto message = basic_bench::msg::Bench();
+    auto message = basic_bench_msgs::msg::Bench();
 
     message.id = id_;
     message.junk.resize(vectorSizeSchedule[sizeScheduleIndex]);
-    auto now = std::chrono::steady_clock::now(); // chrono might be overengineered. This library is insane.
+    auto now = std::chrono::steady_clock::now();
     auto now_64b = std::chrono::duration_cast<std::chrono::nanoseconds>(now.time_since_epoch()).count();
     message.stamp = now_64b;
     publisher_->publish(message);
@@ -79,7 +78,8 @@ private:
       exit(-1);
     }
     // write a simple header for the file
-    file << buf_size << " measurements\n";
+    std::time_t today = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+    file << buf_size << " measurements, approximate date: " << std::ctime(&today); // beware: ctime inserts a newline, try keeping this last.
 
     std::for_each(buf, buf + buf_size, [&file](auto measurement){
       file << measurement << '\n';
@@ -95,7 +95,7 @@ private:
 
   /** member declarations */
   rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::Publisher<basic_bench::msg::Bench>::SharedPtr publisher_;
+  rclcpp::Publisher<basic_bench_msgs::msg::Bench>::SharedPtr publisher_;
   size_t id_;
 
   std::chrono::milliseconds rate_ms; // this is needed to remember the rate outside of the node constructor

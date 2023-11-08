@@ -1,0 +1,223 @@
+[0.061s] Invoking command in '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench': CMAKE_PREFIX_PATH=/home/ruben/june-measurements/ros2/install/bridge_bench:/home/ruben/june-measurements/ros2/install/basic_bench:/opt/ros/dashing:/home/ruben/catkin_ws/devel:/opt/ros/melodic /usr/bin/cmake /home/ruben/june-measurements/ros2/src/basic_bench -DCMAKE_INSTALL_PREFIX=/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench
+[0.704s] -- The C compiler identification is GNU 7.5.0
+[1.258s] -- The CXX compiler identification is GNU 7.5.0
+[1.283s] -- Check for working C compiler: /usr/bin/cc
+[1.466s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.467s] -- Detecting C compiler ABI info
+[1.566s] -- Detecting C compiler ABI info - done
+[1.573s] -- Detecting C compile features
+[1.875s] -- Detecting C compile features - done
+[1.882s] -- Check for working CXX compiler: /usr/bin/c++
+[1.999s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[2.000s] -- Detecting CXX compiler ABI info
+[2.117s] -- Detecting CXX compiler ABI info - done
+[2.122s] -- Detecting CXX compile features
+[2.740s] -- Detecting CXX compile features - done
+[2.757s] -- Found ament_cmake: 0.7.6 (/opt/ros/dashing/share/ament_cmake/cmake)
+[2.810s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") 
+[2.810s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.367s] -- Found rclcpp: 0.7.16 (/opt/ros/dashing/share/rclcpp/cmake)
+[3.444s] -- Found rosidl_adapter: 0.7.10 (/opt/ros/dashing/share/rosidl_adapter/cmake)
+[3.549s] -- Found rmw_implementation_cmake: 0.7.2 (/opt/ros/dashing/share/rmw_implementation_cmake/cmake)
+[3.557s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.562s] -- Looking for pthread.h
+[3.723s] -- Looking for pthread.h - found
+[3.725s] -- Looking for pthread_create
+[3.831s] -- Looking for pthread_create - not found
+[3.835s] -- Looking for pthread_create in pthreads
+[3.920s] -- Looking for pthread_create in pthreads - not found
+[3.921s] -- Looking for pthread_create in pthread
+[4.020s] -- Looking for pthread_create in pthread - found
+[4.022s] -- Found Threads: TRUE  
+[4.099s] -- Found basic_bench: 0.0.0 (/home/ruben/june-measurements/ros2/install/basic_bench/share/basic_bench/cmake)
+[4.111s] -- Found rosidl_default_generators: 0.7.0 (/opt/ros/dashing/share/rosidl_default_generators/cmake)
+[4.477s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1") 
+[4.512s] -- Found FastRTPS: /opt/ros/dashing/include  
+[4.638s] -- Found PythonInterp: /usr/bin/python3 (found version "3.6.9") 
+[4.854s] -- Using single matching rosidl_typesupport_c: rosidl_typesupport_fastrtps_c
+[4.863s] -- Using single matching rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp
+[5.030s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3.5") 
+[5.035s] -- Found python_cmake_module: 0.7.11 (/opt/ros/dashing/share/python_cmake_module/cmake)
+[5.099s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.6m.so (found suitable version "3.6.9", minimum required is "3.5") 
+[5.100s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[5.100s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.6m
+[5.100s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.6m.so
+[5.138s] -- Found PythonExtra: .so  
+[5.348s] -- Found ament_lint_auto: 0.7.12 (/opt/ros/dashing/share/ament_lint_auto/cmake)
+[5.440s] -- Added test 'copyright' to check for copyright in CMake / C / C++ / Python code
+[5.448s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[5.450s] -- Configured cppcheck include dirs: /home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_generator_c;/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_typesupport_c;/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_typesupport_fastrtps_c;/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_generator_cpp;/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_typesupport_fastrtps_cpp;/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_typesupport_introspection_c;/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench/rosidl_generator_py
+[5.459s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[5.462s] -- Added test 'flake8' to check Python code syntax and style conventions
+[5.465s] -- Added test 'lint_cmake' to check CMake code style
+[5.471s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[5.479s] -- Added test 'uncrustify' to check C / C++ code style
+[5.482s] -- Added test 'xmllint' to check XML markup files
+[5.490s] -- Configuring done
+[5.600s] -- Generating done
+[5.618s] -- Build files have been written to: /home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench
+[5.618s] Invoked command in '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench' returned '0': CMAKE_PREFIX_PATH=/home/ruben/june-measurements/ros2/install/bridge_bench:/home/ruben/june-measurements/ros2/install/basic_bench:/opt/ros/dashing:/home/ruben/catkin_ws/devel:/opt/ros/melodic /usr/bin/cmake /home/ruben/june-measurements/ros2/src/basic_bench -DCMAKE_INSTALL_PREFIX=/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench
+[5.624s] Invoking command in '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench': CMAKE_PREFIX_PATH=/home/ruben/june-measurements/ros2/install/bridge_bench:/home/ruben/june-measurements/ros2/install/basic_bench:/opt/ros/dashing:/home/ruben/catkin_ws/devel:/opt/ros/melodic /usr/bin/cmake --build /home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench -- -j2 -l2
+[5.690s] [35m[1mScanning dependencies of target basic_bench__cpp[0m
+[5.694s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[5.711s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[6.204s] [  6%] Built target basic_bench__cpp
+[6.225s] [35m[1mScanning dependencies of target basic_bench_subscriber[0m
+[6.286s] [35m[1mScanning dependencies of target basic_bench__rosidl_generator_c[0m
+[6.322s] [  9%] [32mBuilding C object CMakeFiles/basic_bench__rosidl_generator_c.dir/rosidl_generator_c/basic_bench/msg/bench__functions.c.o[0m
+[6.478s] [ 12%] [32m[1mLinking C shared library libbasic_bench__rosidl_generator_c.so[0m
+[6.537s] [ 12%] Built target basic_bench__rosidl_generator_c
+[6.563s] [35m[1mScanning dependencies of target basic_bench_publisher[0m
+[6.670s] [ 15%] [32mBuilding CXX object CMakeFiles/basic_bench_subscriber.dir/src/subscriber.cpp.o[0m
+[6.675s] [ 18%] [32mBuilding CXX object CMakeFiles/basic_bench_publisher.dir/src/publisher.cpp.o[0m
+[10.896s] [ 21%] [32m[1mLinking CXX executable basic_bench_publisher[0m
+[11.024s] [ 24%] [32m[1mLinking CXX executable basic_bench_subscriber[0m
+[11.140s] [ 24%] Built target basic_bench_publisher
+[11.160s] [ 27%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[11.360s] [ 27%] Built target basic_bench_subscriber
+[11.375s] [ 30%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[11.502s] [35m[1mScanning dependencies of target basic_bench__rosidl_typesupport_fastrtps_cpp[0m
+[11.545s] [ 33%] [32mBuilding CXX object CMakeFiles/basic_bench__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/basic_bench/msg/dds_fastrtps/bench__type_support.cpp.o[0m
+[11.975s] [ 36%] [32m[1mLinking CXX shared library libbasic_bench__rosidl_typesupport_fastrtps_cpp.so[0m
+[12.024s] [35m[1mScanning dependencies of target basic_bench__rosidl_typesupport_introspection_cpp[0m
+[12.107s] [ 36%] Built target basic_bench__rosidl_typesupport_fastrtps_cpp
+[12.129s] [ 39%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[12.156s] [ 42%] [32mBuilding CXX object CMakeFiles/basic_bench__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/basic_bench/msg/bench__type_support.cpp.o[0m
+[12.446s] [ 45%] [32m[1mLinking CXX shared library libbasic_bench__rosidl_typesupport_introspection_cpp.so[0m
+[12.454s] [35m[1mScanning dependencies of target basic_bench__rosidl_typesupport_introspection_c[0m
+[12.480s] [ 48%] [32mBuilding C object CMakeFiles/basic_bench__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/basic_bench/msg/bench__type_support.c.o[0m
+[12.529s] [ 51%] [32m[1mLinking C shared library libbasic_bench__rosidl_typesupport_introspection_c.so[0m
+[12.544s] [ 51%] Built target basic_bench__rosidl_typesupport_introspection_cpp
+[12.560s] [ 54%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[12.574s] [ 54%] Built target basic_bench__rosidl_typesupport_introspection_c
+[12.594s] [ 57%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[12.885s] [35m[1mScanning dependencies of target basic_bench__rosidl_typesupport_cpp[0m
+[12.936s] [ 60%] [32mBuilding CXX object CMakeFiles/basic_bench__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/basic_bench/msg/bench__type_support.cpp.o[0m
+[12.938s] [35m[1mScanning dependencies of target basic_bench__rosidl_typesupport_fastrtps_c[0m
+[12.981s] [ 63%] [32mBuilding CXX object CMakeFiles/basic_bench__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/basic_bench/msg/bench__type_support_c.cpp.o[0m
+[13.345s] [ 66%] [32m[1mLinking CXX shared library libbasic_bench__rosidl_typesupport_fastrtps_c.so[0m
+[13.354s] [ 69%] [32m[1mLinking CXX shared library libbasic_bench__rosidl_typesupport_cpp.so[0m
+[13.478s] [ 69%] Built target basic_bench__rosidl_typesupport_fastrtps_c
+[13.496s] [ 69%] Built target basic_bench__rosidl_typesupport_cpp
+[13.499s] [ 72%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[13.761s] [35m[1mScanning dependencies of target basic_bench__rosidl_typesupport_c[0m
+[13.782s] [ 75%] [32mBuilding CXX object CMakeFiles/basic_bench__rosidl_typesupport_c.dir/rosidl_typesupport_c/basic_bench/msg/bench__type_support.cpp.o[0m
+[13.825s] [ 78%] [32m[1mLinking CXX shared library libbasic_bench__rosidl_typesupport_c.so[0m
+[13.893s] [ 78%] Built target basic_bench__rosidl_typesupport_c
+[13.910s] [35m[1mScanning dependencies of target basic_bench[0m
+[13.929s] [ 78%] Built target basic_bench
+[13.948s] [35m[1mScanning dependencies of target basic_bench__py[0m
+[13.966s] [ 81%] [34m[1mGenerating Python code for ROS interfaces[0m
+[14.462s] [ 81%] Built target basic_bench__py
+[14.478s] [35m[1mScanning dependencies of target basic_bench__python[0m
+[14.594s] [ 84%] [32mBuilding C object CMakeFiles/basic_bench__python.dir/rosidl_generator_py/basic_bench/msg/_bench_s.c.o[0m
+[14.735s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/basic_bench/libbasic_bench__python.so[0m
+[14.808s] [ 87%] Built target basic_bench__python
+[14.824s] [35m[1mScanning dependencies of target basic_bench__rosidl_typesupport_c__pyext[0m
+[14.826s] [35m[1mScanning dependencies of target basic_bench__rosidl_typesupport_fastrtps_c__pyext[0m
+[14.857s] [ 90%] [32mBuilding C object CMakeFiles/basic_bench__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/basic_bench/_basic_bench_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[14.868s] [ 93%] [32mBuilding C object CMakeFiles/basic_bench__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/basic_bench/_basic_bench_s.ep.rosidl_typesupport_c.c.o[0m
+[14.970s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/basic_bench/basic_bench_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so[0m
+[14.970s] [100%] [32m[1mLinking C shared library rosidl_generator_py/basic_bench/basic_bench_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so[0m
+[15.029s] [100%] Built target basic_bench__rosidl_typesupport_fastrtps_c__pyext
+[15.030s] [100%] Built target basic_bench__rosidl_typesupport_c__pyext
+[15.056s] Invoked command in '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench' returned '0': CMAKE_PREFIX_PATH=/home/ruben/june-measurements/ros2/install/bridge_bench:/home/ruben/june-measurements/ros2/install/basic_bench:/opt/ros/dashing:/home/ruben/catkin_ws/devel:/opt/ros/melodic /usr/bin/cmake --build /home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench -- -j2 -l2
+[15.200s] Invoking command in '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench': CMAKE_PREFIX_PATH=/home/ruben/june-measurements/ros2/install/bridge_bench:/home/ruben/june-measurements/ros2/install/basic_bench:/opt/ros/dashing:/home/ruben/catkin_ws/devel:/opt/ros/melodic /usr/bin/cmake --build /home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench --target install -- -j2 -l2
+[15.285s] [ 12%] Built target basic_bench__rosidl_generator_c
+[15.286s] [ 12%] Built target basic_bench__cpp
+[15.325s] [ 18%] Built target basic_bench_subscriber
+[15.326s] [ 24%] Built target basic_bench_publisher
+[15.362s] [ 33%] Built target basic_bench__rosidl_typesupport_introspection_cpp
+[15.366s] [ 42%] Built target basic_bench__rosidl_typesupport_fastrtps_cpp
+[15.398s] [ 51%] Built target basic_bench__rosidl_typesupport_introspection_c
+[15.405s] [ 60%] Built target basic_bench__rosidl_typesupport_cpp
+[15.438s] [ 69%] Built target basic_bench__rosidl_typesupport_fastrtps_c
+[15.478s] [ 78%] Built target basic_bench__rosidl_typesupport_c
+[15.510s] [ 78%] Built target basic_bench
+[15.542s] [ 81%] Built target basic_bench__py
+[15.582s] [ 87%] Built target basic_bench__python
+[15.622s] [ 93%] Built target basic_bench__rosidl_typesupport_fastrtps_c__pyext
+[15.626s] [100%] Built target basic_bench__rosidl_typesupport_c__pyext
+[15.657s] [36mInstall the project...[0m
+[15.672s] -- Install configuration: ""
+[15.672s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/ament_index/resource_index/rosidl_interfaces/basic_bench
+[15.672s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench
+[15.672s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg
+[15.672s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__struct.hpp
+[15.673s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench.hpp
+[15.673s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__traits.hpp
+[15.673s] -- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench
+[15.673s] -- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg
+[15.674s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__type_support.h
+[15.674s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/rosidl_generator_c__visibility_control.h
+[15.674s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__functions.c
+[15.674s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench.h
+[15.674s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__struct.h
+[15.674s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__functions.h
+[15.674s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/environment/library_path.sh
+[15.674s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_generator_c.so
+[15.675s] -- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_generator_c.so" to ""
+[15.675s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_c.so
+[15.676s] -- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_c.so" to ""
+[15.676s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_cpp.so
+[15.677s] -- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_cpp.so" to ""
+[15.677s] -- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench
+[15.677s] -- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg
+[15.677s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__rosidl_typesupport_introspection_c.h
+[15.677s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__type_support.c
+[15.677s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[15.677s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_introspection_c.so
+[15.677s] -- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_introspection_c.so" to ""
+[15.677s] -- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench
+[15.677s] -- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg
+[15.677s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__rosidl_typesupport_introspection_cpp.hpp
+[15.678s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__type_support.cpp
+[15.678s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_introspection_cpp.so
+[15.678s] -- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_introspection_cpp.so" to ""
+[15.678s] -- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench
+[15.679s] -- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg
+[15.679s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__rosidl_typesupport_fastrtps_c.h
+[15.679s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[15.679s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_fastrtps_c.so
+[15.679s] -- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_fastrtps_c.so" to ""
+[15.679s] -- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench
+[15.679s] -- Up-to-date: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg
+[15.679s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/bench__rosidl_typesupport_fastrtps_cpp.hpp
+[15.679s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/dds_fastrtps
+[15.679s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/include/basic_bench/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[15.679s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_fastrtps_cpp.so
+[15.680s] -- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__rosidl_typesupport_fastrtps_cpp.so" to ""
+[15.680s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/environment/pythonpath.sh
+[15.680s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/__init__.py
+[15.721s] Compiling '/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/__init__.py'...
+[15.726s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/msg
+[15.726s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/msg/__init__.py
+[15.726s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/msg/_bench.py
+[15.727s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/msg/_bench_s.c
+[15.739s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/basic_bench_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so
+[15.740s] -- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/basic_bench_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so" to ""
+[15.740s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/basic_bench_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so
+[15.740s] -- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/python3.6/site-packages/basic_bench/basic_bench_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so" to ""
+[15.740s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__python.so
+[15.740s] -- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/libbasic_bench__python.so" to ""
+[15.740s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/msg/Bench.idl
+[15.741s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/msg/Bench.msg
+[15.741s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/basic_bench/basic_bench_publisher
+[15.741s] -- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/basic_bench/basic_bench_publisher" to ""
+[15.741s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/basic_bench/basic_bench_subscriber
+[15.741s] -- Set runtime path of "/home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/lib/basic_bench/basic_bench_subscriber" to ""
+[15.741s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/ament_index/resource_index/package_run_dependencies/basic_bench
+[15.742s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/ament_index/resource_index/parent_prefix_path/basic_bench
+[15.742s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/environment/ament_prefix_path.sh
+[15.742s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/environment/path.sh
+[15.742s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/local_setup.bash
+[15.742s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/local_setup.sh
+[15.742s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/local_setup.zsh
+[15.743s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/ament_index/resource_index/packages/basic_bench
+[15.743s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/rosidl_cmake-extras.cmake
+[15.743s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/ament_cmake_export_include_directories-extras.cmake
+[15.743s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/ament_cmake_export_libraries-extras.cmake
+[15.743s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/basic_benchConfig.cmake
+[15.744s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/cmake/basic_benchConfig-version.cmake
+[15.744s] -- Installing: /home/ruben/june-measurements/ros2/src/basic_bench/install/basic_bench/share/basic_bench/package.xml
+[15.744s] Invoked command in '/home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench' returned '0': CMAKE_PREFIX_PATH=/home/ruben/june-measurements/ros2/install/bridge_bench:/home/ruben/june-measurements/ros2/install/basic_bench:/opt/ros/dashing:/home/ruben/catkin_ws/devel:/opt/ros/melodic /usr/bin/cmake --build /home/ruben/june-measurements/ros2/src/basic_bench/build/basic_bench --target install -- -j2 -l2
