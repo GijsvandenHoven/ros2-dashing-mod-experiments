@@ -7,7 +7,7 @@ using namespace std::chrono_literals;
 namespace messages = basic_bench_msgs::msg;
 
 class SimplePublisher : public ParameterizedNode {
-
+uint64_t id = 1; // todo remove
 public:
 
   SimplePublisher()
@@ -27,6 +27,7 @@ private:
     auto message = messages::BenchMinimal();
     message.junk.resize(MSG_SIZE_PARAM);
 
+    RCLCPP_INFO(this->get_logger(), "send msg #%llu", id); id++;
     publisher_->publish(message);
   }
 

@@ -1,0 +1,6 @@
+I duplicated the simple_node files from experiment_02, 
+because I cannot figure out CMake to let me include headers from other packages.
+
+If someone reads this and is bothered by this, go fix it ;)
+
+I struggle so badly with the CMake docs my god.

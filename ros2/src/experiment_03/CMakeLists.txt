@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(experiment_02)
+project(experiment_03)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -19,19 +19,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(basic_bench_msgs REQUIRED)
-
-include_directories(include)
-
-add_executable(simple_publisher src/simple_publisher.cpp src/simple_node.cpp)
-ament_target_dependencies(simple_publisher rclcpp basic_bench_msgs)
-
-add_executable(simple_subscriber src/simple_subscriber.cpp src/simple_node.cpp)
-ament_target_dependencies(simple_subscriber rclcpp basic_bench_msgs)
-
-install(TARGETS 
-  simple_publisher
-  simple_subscriber
-  DESTINATION lib/${PROJECT_NAME})
+find_package(experiment_02 REQUIRED)
 
 install(DIRECTORY
   launch

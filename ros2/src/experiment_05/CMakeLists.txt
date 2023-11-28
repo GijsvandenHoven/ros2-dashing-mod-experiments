@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(experiment_02)
+project(experiment_05)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -22,15 +22,15 @@ find_package(basic_bench_msgs REQUIRED)
 
 include_directories(include)
 
-add_executable(simple_publisher src/simple_publisher.cpp src/simple_node.cpp)
-ament_target_dependencies(simple_publisher rclcpp basic_bench_msgs)
+add_executable(multi_timer_publisher src/multi_timer_publisher.cpp src/simple_node.cpp)
+ament_target_dependencies(multi_timer_publisher rclcpp basic_bench_msgs)
 
-add_executable(simple_subscriber src/simple_subscriber.cpp src/simple_node.cpp)
-ament_target_dependencies(simple_subscriber rclcpp basic_bench_msgs)
+add_executable(multi_timer_publisher_mutex src/multi_timer_publisher_mutex.cpp src/simple_node.cpp)
+ament_target_dependencies(multi_timer_publisher_mutex rclcpp basic_bench_msgs)
 
 install(TARGETS 
-  simple_publisher
-  simple_subscriber
+  multi_timer_publisher
+  multi_timer_publisher_mutex
   DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY

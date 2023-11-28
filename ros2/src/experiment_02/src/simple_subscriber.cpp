@@ -24,9 +24,9 @@ public:
 private:
 
     void topic_callback(const messages::BenchMinimal::SharedPtr msg) {
-        //RCLCPP_INFO(this->get_logger(), "recv from %u", msg->vandenhoven_publisher_hash);
+        RCLCPP_INFO(this->get_logger(), "final recv from %u id %llu", msg->vandenhoven_publisher_hash, msg->vandenhoven_identifier);
         BUSY_WAIT_MS(HOLD_CALLBACK_PARAM)
-        //RCLCPP_INFO(this->get_logger(), "yield");
+        // RCLCPP_INFO(this->get_logger(), "yield");
     }
 
     rclcpp::Subscription<messages::BenchMinimal>::SharedPtr subscription_;

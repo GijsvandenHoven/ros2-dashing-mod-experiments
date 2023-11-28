@@ -24,7 +24,7 @@ def generate_launch_description():
             prefix=['stdbuf -o L'],
             output='screen',
             parameters=[
-                {"msg_size_bytes_": 64},
+                {"msg_size_bytes_": 65536},
                 {"launch_offset_time_ms_": 167},
                 {"activate_rate_ms_": 500}
             ]
@@ -37,7 +37,7 @@ def generate_launch_description():
             prefix=['stdbuf -o L'],
             output='screen',
             parameters=[
-                {"msg_size_bytes_": 256},
+                {"msg_size_bytes_": 4194304},
                 {"launch_offset_time_ms_": 333},
                 {"activate_rate_ms_": 500}
             ]

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>experiment_03</name>
+  <version>0.0.0</version>
+  <description>third experiment of nov 2023 experiments on ros2-dashing-mod</description>
+  <maintainer email="g.m.c.v.d.hoven@student.tue.nl">gijs van den hoven</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>basic_bench_msgs</depend>
+  <depend>experiment_02</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
